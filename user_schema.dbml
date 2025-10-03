@@ -1,0 +1,79 @@
+// ASHA Profile Database Schema
+
+Table asha_profile {
+  id bigint [pk, increment]
+  name varchar(255)
+  village varchar(255)
+  employee_id integer [ref: > m_user.UserID, note: 'Foreign key to m_user']
+  dob varchar(15)
+  mobile_number varchar(10)
+  alternate_mobile_number varchar(10)
+  father_or_spouse_name varchar(255)
+  date_of_joining varchar(15)
+  bank_account varchar(18)
+  ifsc varchar(11)
+  population_covered int
+  cho_name varchar(255)
+  cho_mobile varchar(10)
+  aww_name varchar(255)
+  aww_mobile varchar(10)
+  anm1_name varchar(255)
+  anm1_mobile varchar(10)
+  anm2_name varchar(255)
+  anm2_mobile varchar(10)
+  abha_number varchar(14)
+  asha_household_registration varchar(255)
+  asha_family_member varchar(255)
+  ProviderServiceMapID varchar(100)
+  profileImage varchar(1000)
+  supervisorName varchar(225)
+  supervisorMobile varchar(225)
+  isFatherOrSpouse tinyint
+  Note: 'ASHA (Accredited Social Health Activist) Profile Information'
+}
+
+Table m_user {
+  UserID int [pk, increment]
+  TitleID smallint
+  FirstName varchar(50) [not null]
+  MiddleName varchar(50)
+  LastName varchar(50)
+  GenderID smallint
+  MaritalStatusID smallint
+  AadhaarNo varchar(20) [unique]
+  PAN varchar(20)
+  DOB datetime
+  DOJ datetime
+  QualificationID int
+  DesignationID int
+  EmployeeID varchar(20) [unique]
+  UserName varchar(20) [unique, not null]
+  Password varchar(250) [not null]
+  CZUserID varchar(20)
+  CZPassword varchar(250)
+  AgentID varchar(20)
+  AgentPassword varchar(250)
+  CZRole varchar(30)
+  ContactNo varchar(12)
+  EmailID varchar(100) [unique]
+  StatusID smallint
+  ServiceProviderID smallint
+  EmergencyContactPerson varchar(50)
+  EmergencyContactNo varchar(15)
+  IsExternal bit
+  IsSupervisor bit
+  IsProviderAdmin bit
+  Remarks varchar(100)
+  HealthProfessionalID varchar(30)
+  Deleted bit [default: 0]
+  Processed char(4)
+  CreatedBy varchar(50)
+  CreatedDate datetime [default: 'now()']
+  ModifiedBy varchar(50)
+  LastModDate datetime
+  failed_attempt smallint [default: 0]
+  Note: 'Master User Table - Contains all user accounts'
+}
+
+// Relationship
+Ref: asha_profile.employee_id > m_user.UserID [delete: cascade]

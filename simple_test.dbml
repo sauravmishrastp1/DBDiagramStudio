@@ -1,0 +1,22 @@
+// Simplified test schema for your tables
+
+Table asha_profile {
+  id bigint [pk, increment]
+  name varchar(255)
+  village varchar(255)
+  employee_id integer
+  dob varchar(15)
+  mobile_number varchar(10)
+  Note: 'ASHA Profile - Showing 5 of 28 columns'
+}
+
+Table m_user {
+  UserID int [pk, increment]
+  FirstName varchar(50)
+  LastName varchar(50)
+  UserName varchar(20) [unique]
+  EmailID varchar(100) [unique]
+  Note: 'Master User - Showing 5 of 39 columns'
+}
+
+Ref: asha_profile.employee_id > m_user.UserID

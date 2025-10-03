@@ -1,0 +1,70 @@
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║           DB DIAGRAM WEB APP - QUICK START                ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+
+🚀 TO START THE APP:
+
+   Double-click this file:  🚀_START_APP.bat
+
+   OR run in terminal:  npm run dev
+
+
+📱 THEN OPEN BROWSER:
+
+   http://localhost:3000
+
+
+✨ HOW TO USE:
+
+   1. Click "Import SQL/DBML" (green button)
+   
+   2. Paste your SQL database:
+   
+      CREATE TABLE users (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        username VARCHAR(50) NOT NULL,
+        email VARCHAR(100) NOT NULL
+      );
+      
+      CREATE TABLE posts (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        user_id INT NOT NULL,
+        title VARCHAR(255),
+        FOREIGN KEY (user_id) REFERENCES users(id)
+      );
+   
+   3. Click "Import & Generate"
+   
+   4. Your diagram appears! 🎨
+
+
+🎯 FEATURES:
+
+   ✓ Import entire SQL databases
+   ✓ Auto-generate beautiful diagrams
+   ✓ Zoom, pan, drag tables
+   ✓ Export as PNG images
+   ✓ Load sample schemas
+   ✓ Auto-layout tables
+
+
+📋 SAMPLE DATABASES INCLUDED:
+
+   • E-Commerce (Users, Products, Orders)
+   • Blog Platform (Posts, Comments, Tags)
+   • Social Media (Users, Posts, Follows)
+
+
+💡 TIP:
+
+   You can import databases with ANY number of tables!
+   Just paste the entire SQL and click Import.
+
+
+═══════════════════════════════════════════════════════════
+
+Need help? Check README.md or START_HERE.md
+
+═══════════════════════════════════════════════════════════

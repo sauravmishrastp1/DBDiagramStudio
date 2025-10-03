@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quick Fix Guide</title>
+    <style>
+        body { font-family: Arial; padding: 40px; background: #f5f5f5; }
+        .container { background: white; padding: 30px; border-radius: 10px; max-width: 800px; margin: 0 auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #0ea5e9; }
+        .step { background: #f0f9ff; padding: 15px; margin: 15px 0; border-left: 4px solid #0ea5e9; }
+        code { background: #1f2937; color: #10b981; padding: 2px 8px; border-radius: 4px; }
+        .warning { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px; margin: 15px 0; }
+        .success { background: #d1fae5; border-left: 4px solid #10b981; padding: 15px; margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Columns Not Showing - Quick Fix</h1>
+        
+        <div class="warning">
+            <strong>⚠️ Issue:</strong> Columns nahi dikh rahe hain tables mein
+        </div>
+
+        <h2>✅ Solution - 3 Steps:</h2>
+
+        <div class="step">
+            <h3>Step 1: Hard Refresh Browser</h3>
+            <p>Browser cache clear karo:</p>
+            <ul>
+                <li><strong>Windows:</strong> Press <code>Ctrl + Shift + R</code></li>
+                <li><strong>Or:</strong> Press <code>Ctrl + F5</code></li>
+                <li><strong>Or:</strong> Open DevTools (F12) → Right-click refresh → "Empty Cache and Hard Reload"</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>Step 2: Check Browser URL</h3>
+            <p>Make sure you're on: <code>http://localhost:3000</code></p>
+            <p>(Server is running on port 3000 - check terminal)</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 3: Generate Diagram Again</h3>
+            <ol>
+                <li>Click <strong>"Edit Schema"</strong> button (blue button)</li>
+                <li>Your DBML code already hoga editor mein</li>
+                <li>Click <strong>"Generate Diagram"</strong></li>
+                <li>Tables should appear with ALL columns!</li>
+            </ol>
+        </div>
+
+        <div class="success">
+            <h3>✨ What You Should See:</h3>
+            <ul>
+                <li>✅ <strong>asha_profile</strong> - Header shows "28 columns"</li>
+                <li>✅ All 28 column names visible (scroll inside table)</li>
+                <li>✅ <strong>m_user</strong> - Header shows "39 columns"</li>
+                <li>✅ All 39 column names visible (scroll inside table)</li>
+                <li>✅ Arrow connecting the two tables</li>
+            </ul>
+        </div>
+
+        <h2>🐛 Still Not Working?</h2>
+        
+        <div class="step">
+            <h3>Try This:</h3>
+            <ol>
+                <li>Open Browser DevTools: Press <code>F12</code></li>
+                <li>Go to <strong>Console</strong> tab</li>
+                <li>Check for any red errors</li>
+                <li>Take a screenshot and share it</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3>Or Screenshot This:</h3>
+            <p>Take a screenshot showing:</p>
+            <ul>
+                <li>The full browser window with the diagram</li>
+                <li>One of the table cards</li>
+                <li>What you see (or don't see)</li>
+            </ul>
+        </div>
+
+        <hr style="margin: 30px 0;">
+
+        <h2>🎯 Alternative: Use Simple Test Schema First</h2>
+        <p>To verify app is working, try this small schema first:</p>
+        
+        <div style="background: #1f2937; color: #10b981; padding: 15px; border-radius: 5px; overflow-x: auto;">
+            <pre style="margin: 0;">Table test_users {
+  id int [pk, increment]
+  name varchar(100)
+  email varchar(100)
+}
+
+Table test_posts {
+  id int [pk, increment]
+  user_id int
+  title varchar(255)
+}
+
+Ref: test_posts.user_id > test_users.id</pre>
+        </div>
+        
+        <p style="margin-top: 15px;">If this works, then your big schema will work too!</p>
+    </div>
+</body>
+</html>

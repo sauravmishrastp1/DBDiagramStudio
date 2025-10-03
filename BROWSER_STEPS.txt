@@ -1,0 +1,112 @@
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║        🔧 COLUMNS NAHI DIKH RAHE - FIX KARO! 🔧          ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+
+⚠️ IMPORTANT: Browser cache clear karna MUST hai!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔴 METHOD 1: Hard Refresh (RECOMMENDED)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Browser mein jao: http://localhost:3000
+
+2. Press these keys TOGETHER:
+   
+   Windows: Ctrl + Shift + R
+   
+   Or: Ctrl + F5
+
+3. Page reload hoga with fresh code
+
+4. "Edit Schema" click karo
+
+5. "Generate Diagram" click karo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔴 METHOD 2: DevTools Clear Cache
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Press F12 (DevTools khulega)
+
+2. DevTools open hai to:
+   - Refresh button pe RIGHT-CLICK karo
+   - Select: "Empty Cache and Hard Reload"
+
+3. DevTools close karo (F12 again)
+
+4. "Edit Schema" → "Generate Diagram"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔴 METHOD 3: Complete Browser Reset
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Close browser COMPLETELY
+
+2. Open NEW browser window
+
+3. Go to: http://localhost:3000
+
+4. "Edit Schema" → "Generate Diagram"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ KYA DIKHNA CHAHIYE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+asha_profile table:
+├─ Header: "asha_profile"
+├─ Sub-header: "28 columns"
+├─ Column list:
+│  ├─ 🔑 id
+│  ├─ name
+│  ├─ village
+│  ├─ employee_id
+│  ├─ dob
+│  ├─ mobile_number
+│  ├─ ... (scroll down)
+│  └─ isFatherOrSpouse (last one)
+
+m_user table:
+├─ Header: "m_user"
+├─ Sub-header: "39 columns"
+├─ Column list:
+│  ├─ 🔑 UserID
+│  ├─ TitleID
+│  ├─ FirstName
+│  ├─ ... (scroll down)
+│  └─ failed_attempt (last one)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🐛 DEBUGGING - Check Console:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Press F12 (open DevTools)
+
+2. Click "Console" tab
+
+3. Generate diagram
+
+4. Console mein ye dikhna chahiye:
+   
+   ✅ Parsed Schema: {tables: Array(2), ...}
+   📊 Tables: ['asha_profile (28 columns)', 'm_user (39 columns)']
+
+5. Agar ye nahi dikha to screenshot bhejo!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📸 AGAR ABHI BHI ISSUE HAI:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Screenshot bhejo showing:
+1. Browser with diagram visible
+2. Console tab (F12)
+3. Kya dikh raha hai
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
